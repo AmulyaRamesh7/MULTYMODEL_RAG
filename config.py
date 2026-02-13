@@ -1,10 +1,8 @@
 import os
-from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
-
-JINA_API_KEY = os.getenv("JINA_API_KEY")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+JINA_API_KEY = os.getenv("JINA_API_KEY") or st.secrets.get("JINA_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY")
 
 JINA_EMBEDDING_URL = "https://api.jina.ai/v1/embeddings"
 GROQ_MODEL = "llama3-70b-8192"
