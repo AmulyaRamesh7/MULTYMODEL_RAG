@@ -1,0 +1,8 @@
+streamlit
+faiss-cpu
+requests
+python-dotenv
+pypdf
+Pillow
+numpy
+groq
